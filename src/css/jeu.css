@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+    /*
+    font-family: 'Noto Sans', sans-serif;
+    */
+}
+    
+:root{
+    /* colors */
+    --colNoirPhoto:#181818;
+    --col1: #2F4858;
+    --col2: #165B6F;
+    --col3: #00707E;
+    --col4:#008483;
+    --col5: #00987D;
+    --col6:#04AA6D;
+
+    --alt1:#0BD681;
+    --alt2:#0BE0BA;
+    --alt3:#00BFC9;
+    --alt4:#0B3F70;
+}
+body{
+    
+}
+main{
+    background-image: url(/src/images/white_background.jpg);
+}
+.logo{
+    width: 30px;
+    height: 30px;
+    clip-path: circle(50% at 50% 50%);
+}
+header{
+    min-height: 3rem;
+    background-color: var(--col1);
+    border-bottom: 1px solid var(--alt2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+
+}
+ul{
+    display: flex;
+    list-style-type: none;
+}
+ul li {
+    margin-inline: 3%;
+    margin-block: auto;
+}
+.gridSelector{
+    min-height: 2.5rem;
+    background-color: var(--col2);
+    border-bottom: 1px solid var(--alt2);
+}
+.stepSelector{
+    min-height: 2.5rem;
+    background-color: var(--col3);
+    border-bottom: 1px solid var(--alt2);
+}
+.runSpeedSelector{
+    min-height: 2.5rem;
+    background-color: var(--col4);
+    border-bottom: 1px solid var(--alt2);
+}
+.cellExample{
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.cellExample label{
+    flex-grow: 2;
+}.cellExample div{
+    margin-left: 2rem;
+}
+.emVisual{
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px solid #00987D;
+    border-radius: 5px;
+}
+.alVisual{
+    width: 30px;
+    height: 30px;
+    background: #0B3F70;
+    border: 1px solid #04AA6D;
+    border-radius: 5px;
+}
+.gameGrid{
+    display: flex;
+    justify-content: center;
+}
+.cell{
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px solid #00987D;
+    border-radius: 5px;
+}
+.actionButtons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.nbStep{
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: var(--col2);
+}
+.run{
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: var(--col6);
+}
+.nextStep{
+    grid-area: 1 / 3 / 2 / 4;
+    background-color: var(--alt4);
+}
+.stop{
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: #AA042C;
+}

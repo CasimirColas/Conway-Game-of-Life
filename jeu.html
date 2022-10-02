@@ -4,31 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/jeu.css">
     <title>Jeu</title>
 </head>
 <body>
 
     <header>
-        <img src="src/images/Logo.png" alt="">
-        <Nav>
+        <nav>
             <ul>
+                <li><img class="logo" src="src/images/Logo.png" alt=""></li>
                 <li><a href="index.html">Acceil</a></li>
                 <li><a href="biographie.html">Biographie</a></li>
                 <li><a href="jeu.html">Jeu</a></li>
                 <li><a href="structures.html">Structures</a></li>
                 <li><a href="variantes.html">Variantes</a></li>
             </ul>
-        </Nav>
+        </nav>
     </header>
 
     <main>
         <section class="gridSelector">
             <label>Taille de la grille</label>
-            <input type="range" name="gridSizeSlider" value="0">
-            <input type="number" name="gridSizeNumber" value="0">
+            <input class="gridSizeSlider" type="range" name="gridSizeSlider" value="0">
+            <input class="gridSizeNumber" type="number" name="gridSizeNumber" value="0">
         </section>
 
-        <section class="StepsSelector">
+        <section class="stepSelector">
             <label>Nombre de pas</label>
             <input type="number" name="maxStep" value="0">
         </section>
@@ -39,21 +40,17 @@
         </section>
 
         <section class="cellExample">
-            <div class="exCellEmpty">
-                <label>Case vide</label>
-                <div class="emVisual">
-
-                </div>
-            </div>
-            <div class="exCellFull">
-                <label>Cellule vivante</label>
-                <div class="alVisual">
-
-                </div>
-            </div>
+            <div class="emVisual"></div>
+            <label>Case vide</label>
+            <div class="alVisual"></div>
+            <label>Cellule vivante</label>
         </section>
 
         <section class="gameGrid">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
         </section>
 
         <section class="actionButtons">
