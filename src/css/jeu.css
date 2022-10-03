@@ -3,9 +3,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;    
-    /*
     font-family: 'Noto Sans', sans-serif;
-    */
+    font-weight: 700;
 }
     
 :root{
@@ -26,11 +25,17 @@
 body{
     background-color: orange;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 main{
-    width: 100%;
-    height: 100%;
-    background-image: url(/src/images/white_background.jpg);
+    max-width: 425px;
+    flex-grow: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .logo{
     width: 30px;
@@ -44,41 +49,56 @@ header{
     width: 100%;
 
 }
-nav{
-
-}
 ul{
     display: flex;
     align-items: center;
+    justify-content: center;
     list-style: none;
     flex-wrap: wrap;
 }
 ul li {
-    margin: .5rem;
+    margin: 0.5rem;
+    color: white;
+}
+ul li a{
+    color: white;
+    text-decoration: none;
 }
 .gridSelector{
     width: 100%;
     min-height: 2.5rem;
     background-color: var(--col2);
     border-bottom: 1px solid var(--alt2);
+    border-left: 1px solid var(--alt2);
+    border-right: 1px solid var(--alt2);
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;
 }
-input{
-    max-width: 6rem;
+input[type="range"]{
     margin: 0.5rem;
-    text-align: right; 
+    text-align: right;
+    border: 2px solid var(--alt4)
+}
+input[type="number"]{
+    max-width: 4rem;
+    height: 1.7rem;
+    margin: 0.5rem;
+    text-align: right;
+    border: 2px solid var(--alt4)
 }
 .sideLabel{
     margin: 1rem;
+    color: white;
 }
 .stepSelector{
     min-height: 2.5rem;
     background-color: var(--col3);
     border-bottom: 1px solid var(--alt2);
+    border-left: 1px solid var(--alt2);
+    border-right: 1px solid var(--alt2);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -87,6 +107,8 @@ input{
     min-height: 2.5rem;
     background-color: var(--col4);
     border-bottom: 1px solid var(--alt2);
+    border-left: 1px solid var(--alt2);
+    border-right: 1px solid var(--alt2);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -96,12 +118,13 @@ input{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 .cellExample label{
     flex-grow: 2;
 }.cellExample div{
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 .emVisual{
     width: 30px;
@@ -118,9 +141,13 @@ input{
     border-radius: 5px;
 }
 .gameGrid{
+    width: 123;
     display: flex;
     justify-content: center;
-
+    flex-wrap: wrap;
+    flex-grow: 5;
+    background-image: url(/src/images/white_background.jpg);
+    background-size: cover;
 }
 .cell{
     width: 30px;
@@ -135,25 +162,66 @@ input{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-row-gap: 0.5rem;
+    margin-block: 0.7rem;
 }
 .nbStep{
     grid-area: 1 / 1 / 2 / 2;
     background-color: var(--col2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: white;
+    margin-inline: 0.5rem;
+    max-width: 7rem;
 }
 .run{
     grid-area: 1 / 2 / 2 / 3;
     background-color: var(--col6);
+    border: none;
+    color: white;
+    margin-inline: 0.5rem;
+    max-width: 7rem;
 }
 .nextStep{
     grid-area: 1 / 3 / 2 / 4;
     background-color: var(--alt4);
+    border: none;
+    color: white;
+    margin-inline: 0.5rem;
+    max-width: 7rem;
+    display: grid;
+    align-items: center;
+    justify-items: center;
 }
 .stop{
     grid-area: 2 / 2 / 3 / 3;
     background-color: #AA042C;
+    border: none;
+    color: white;
+    margin-inline: 0.5rem;
+    max-width: 7rem;
 }
 footer{
     width: 100%;
     background-color: var(--col1);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid var(--alt2);
+}
+footer p{
+    margin-inline: 1rem;
+    margin-block: 0.2rem;
+    color: white;
+}
+@media screen and (max-width: 404px){
+    .bottomflex{
+        order: 5;
+    }
+    .gridSizeSlider{
+        display: none;
+    }
 }
