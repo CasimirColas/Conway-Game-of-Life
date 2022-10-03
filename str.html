@@ -4,27 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="str.css">
     <title>Structures</title>
 </head>
 <body>
     <header>
-
+        <nav>
+            <a href="index.html">Acceuil</a>
+            <a href="bio.html">Biographie</a>
+            <a href="game.html">Jeu</a>
+            <a href="str.html">Structures</a>
+            <a href="var.html">Variantes</a>
+            <a href="game.html" class="logo_link">
+                <img src="https://cdn.discordapp.com/attachments/1023883537847423036/1023944391418707988/Logo_projet_2.png" class="logo">
+                </a>
+        </nav>
+        <div class="position_logo">
+            
+        </div>
     </header>
     <main>
-        <h1>Structures Oscillante</h1>
+        <h1 class="title_1">Structures Oscillante</h1>
         <section class="clignotant_principale">
+            <div class="clignotant_forme">Clignotant</div>
             <div class="clignotant">Clignotant</div>
-            <div class="button_test"><label for="test">TEST</label></div>
-            <div class="img_clignotant">
-                <img src="/WCS/Conway-Game-of-Life/src/images/img_clignotant/cli_1.jpg" alt="cli1">
-                image
-                image
-                image
+            <div class="button_test">
+                <a href="game.html">
+                <button class="test_size">TEST</button></a>
             </div>
-            <div class="img_precedente"></div>
-            <div class="lecture"></div>
-            <div class="img_suivante"></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, placeat dignissimos !</p>
+            <div class="img_clignotant">
+                <img id="clicli" src="/WCS/Conway-Game-of-Life/src/images/clignotant/cli_1.jpg" class="cli1">
+            </div>
+
+            <section class="menu_grille">
+                <div class="button_pre">
+                        <button class="pre_size" id="pre-btn"><</button>
+                </div>
+
+                <div class="button_lancer">
+                        <button class="lancer_size" id="start-button">Lancer</button>
+                </div>
+                <div class="button_lancer button_lancer_stop">
+                    <button class="lancer_size" id="stop-button">Stop</button>
+                </div>
+
+                <div class="button_sui">
+                        <button class="sui_size" id="sui-btn">></button>
+                </div>
+            </section>
+
+
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, placeat dignissimos !<br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, placeat dignissimos !</p>
         </section>
         <section class="ruche">
             <div class="ruche">La Ruche</div>
@@ -35,5 +65,6 @@
     <footer>
 
     </footer>
+    <script src="./src/scripts/grid.js"></script>
 </body>
 </html>

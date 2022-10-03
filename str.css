@@ -1,0 +1,179 @@
+/********************style general************************/
+
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url(./src/images/white_background.jpg);
+}
+
+main {
+    padding-top: 70px;
+}
+
+
+
+/********************nav bar******************************/
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    background-color: #2F4858;
+    width: 100%;
+    font-size: 15px;
+    height: 50px;
+    padding-top: 30px;
+    z-index: 100;
+}
+
+nav a {
+    text-decoration: none;
+    color : white;
+}
+
+.logo_link {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    translate: -50%;
+    width: 76px;
+}
+
+.logo {
+    width: 100%;
+
+    border-radius: 70px;
+    z-index: 100;
+}
+
+
+/*******************structure****************************/
+
+.title_1 {
+    padding-top: 75px;
+    text-align: center;
+}
+
+.clignotant_forme {
+    padding-top: 100px;
+    background-color: #2F4858;
+    clip-path: polygon(27% 0, 73% 0, 67% 25%, 33% 25%);
+    z-index: 70;
+}
+
+
+.clignotant {
+    position: absolute;
+    font-size: 20px;
+    z-index: 80;
+    top: 238px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.button_test {
+    display: flex;
+    justify-content: end;
+    padding-right: 53px;
+}
+
+.test_size {
+    height: 50px;
+    width: 100px;
+    font-size: 30px;
+    background-color: #077864;
+    border: none;
+    color: white;
+    box-shadow: 5px -5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.img_clignotant {
+    display: flex;
+    justify-content: center;
+}
+.cli1 {
+    height: 350px;
+}
+
+.menu_grille {
+    display: flex;
+    justify-content: center;
+}
+
+.pre_size {
+    height: 45px;
+    width: 60px;
+    font-size: 30px;
+    background-color: #09B798;
+    border: none;
+    color: white;
+    box-shadow: -5px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button_pre {
+    padding-top: 2px;
+    padding-right: 3px;
+}
+
+
+.lancer_size {
+    height: 50px;
+    width: 120px;
+    font-size: 30px;
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button_lancer_stop {
+    display: none;
+}
+.lancer_size:hover {
+    cursor: pointer;
+}
+
+.sui_size {
+    height: 45px;
+    width: 60px;
+    font-size: 30px;
+    background-color: #077864;
+    border: none;
+    color: white;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button_sui {
+    padding-top: 2px;
+    padding-left: 3px;
+}
+
+.para {
+    background-color: #ACD4D6;
+    opacity: 90%;
+    border-top: 1px solid #00987D;
+    border-bottom: 1px solid #00987D;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-size: 22px;
+    height: auto;
+}
+
+p.para {
+    padding-top: 18px;
+}
+/****************** Responsive ****************/
+
+@media screen and (min-width: 505px){
+    .button_test {
+        display: flex;
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .para {
+        height: 100px;
+    }
+    
+}
