@@ -1,11 +1,16 @@
 /********************style general************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
+
 * {
     font-weight: 700;
+    font-family: 'Noto Sans';
 }
 body{
     padding: 0;
     margin: 0;
     background-image: url(./src/images/white_background.jpg);
+    background-size: cover;
 }
 
 main {
@@ -54,6 +59,13 @@ nav a {
 .title_1 {
     padding-top: 75px;
     text-align: center;
+    font-size: 50px;
+}
+
+.title_2 {
+    padding-top: 75px;
+    text-align: center;
+    font-size: 50px;
 }
 
 .clignotant_forme {
@@ -111,6 +123,18 @@ nav a {
 }
 
 .focli1 {
+    height: 350px;
+}
+
+.bal1 {
+    height: 350px;
+}
+
+.cra1 {
+    height: 350px;
+}
+
+.foruc1 {
     height: 350px;
 }
 
@@ -175,12 +199,12 @@ nav a {
     box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
     text-align: center;
     font-size: 22px;
-    height: auto;
-    margin-bottom: 50px;
+    height: autopx;
+    margin-bottom: 60px;
 }
 
 p.para {
-    padding-top: 18px;
+    padding-top: 20px;
 }
 /****************** Responsive ****************/
 

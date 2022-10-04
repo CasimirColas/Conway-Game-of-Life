@@ -10,18 +10,10 @@ function start10 () {
             frame10 = 2
         }, 200);
         setTimeout(() => {
-            clicli.setAttribute('src', path10 + '3.jpg');
-            frame10 = 3
-        }, 400);
-        setTimeout(() => {
-            clicli.setAttribute('src', path10 + '4.jpg');
-            frame10 = 4
-        }, 600);
-        setTimeout(() => {
             clicli.setAttribute('src', path10 + '1.jpg');
             frame10 = 1
-        }, 800);
-    }, 800);
+        }, 400);
+    }, 400);
 }
 
 function stop10() {
@@ -47,7 +39,7 @@ stopbtn10.addEventListener('click', function () {
 
 pre10.addEventListener('click', function () {
     if (frame10 === 1) {
-        frame10 = 5
+        frame10 = 3
     }
     clicli.setAttribute('src',  path10 + (frame10 -1) + '.jpg')
     frame10--
@@ -58,7 +50,7 @@ sui10.addEventListener('click', function () {
     console.log(frame10)
     clicli.setAttribute('src',  path10 + (frame10) + '.jpg')
     frame10 = frame10 +1;
-    if (frame10 == 5 ) {
+    if (frame10 == 3 ) {
         frame10 = 1
     }
 })
