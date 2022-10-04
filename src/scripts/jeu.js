@@ -18,8 +18,15 @@ function responsive(){
 }
 
 function populate(){
+    let column = 0
+    let row = 0
     for(let i=0;i<maxGridLen*maxGridHight;i++){
-        createCell()
+        createCell(column,row)
+        column ++
+        if(column===maxGridLen){
+            row ++
+            column = 0
+        }
     }
 }
 
