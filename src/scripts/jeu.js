@@ -32,7 +32,6 @@ function createCell(){
 }
 
 function convertCell(element){
-    console.log(element.id)
     if(element.id==="alive"){
         element.setAttribute("id","dead")
     }
