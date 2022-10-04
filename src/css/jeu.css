@@ -125,10 +125,14 @@ input[type="number"]{
     gap: 0.5rem;
     margin-block: 0.6rem;
 }
+.exampleItem{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
 .cellExample label{
-    flex-grow: 2;
-}.cellExample div{
-    margin-left: 1rem;
+    margin-inline: 1rem;
+    width: 8rem;
 }
 .emVisual{
     width: 30px;
