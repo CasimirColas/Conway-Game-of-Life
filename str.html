@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="str.css">
+    <link rel="icon" type="image/png" href="/WCS/Conway-Game-of-Life/src/images/favicon.png" />
     <title>Structures</title>
 </head>
 <body>
     <header>
         <nav>
             <a href="index.html">Acceuil</a>
-            <a href="bio.html">Biographie</a>
+            <a href="biographie.html">Biographie</a>
             <a href="game.html">Jeu</a>
-            <a href="str.html">Structures</a>
-            <a href="var.html">Variantes</a>
+            <a href="structure.html">Structures</a>
+            <a href="variable.html">Variantes</a>
             <a href="game.html" class="logo_link">
                 <img src="https://cdn.discordapp.com/attachments/1023883537847423036/1023944391418707988/Logo_projet_2.png" class="logo">
                 </a>
@@ -25,6 +26,8 @@
     </header>
     <main>
         <h1 class="title_1">Structures Oscillante</h1>
+
+
         <section class="clignotant_principale">
             <div class="clignotant_forme">Clignotant</div>
             <div class="clignotant">Clignotant</div>
@@ -38,26 +41,83 @@
 
             <section class="menu_grille">
                 <div class="button_pre">
-                        <button class="pre_size" id="pre-btn"><</button>
+                        <button class="pre_size" id="pre-btn-cli"><</button>
                 </div>
 
                 <div class="button_lancer">
-                        <button class="lancer_size" id="start-button">Lancer</button>
+                        <button class="lancer_size" id="start-button-cli">Lancer</button>
                 </div>
                 <div class="button_lancer button_lancer_stop">
-                    <button class="lancer_size" id="stop-button">Stop</button>
+                    <button class="lancer_size" id="stop-button-cli">Stop</button>
                 </div>
 
                 <div class="button_sui">
-                        <button class="sui_size" id="sui-btn">></button>
+                        <button class="sui_size" id="sui-btn-cli">></button>
                 </div>
             </section>
-
-
-            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, placeat dignissimos !<br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, placeat dignissimos !</p>
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, placeat dignissimos !<br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, placeat dignissimos !</p>
         </section>
-        <section class="ruche">
-            <div class="ruche">La Ruche</div>
+
+
+        <section class="ruche-principale">
+            <div class="clignotant_forme">Clignotant</div>
+            <div class="clignotant">La Ruche</div>
+            <div class="button_test">
+                <a href="game.html">
+                <button class="test_size">TEST</button></a>
+            </div>
+            <div class="img_clignotant">
+                <img id="rucruc" src="/WCS/Conway-Game-of-Life/src/images/ruche/ruc_1.jpg" class="ruc1">
+            </div>
+
+            <section class="menu_grille">
+                <div class="button_pre">
+                        <button class="pre_size" id="pre-btn-ruc"><</button>
+                </div>
+
+                <div class="button_lancer">
+                        <button class="lancer_size" id="start-button-ruc">Lancer</button>
+                </div>
+                <div class="button_lancer button_lancer_stop">
+                    <button class="lancer_size" id="stop-button-ruc">Stop</button>
+                </div>
+
+                <div class="button_sui">
+                        <button class="sui_size" id="sui-btn-ruc">></button>
+                </div>
+            </section>
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, placeat dignissimos !<br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, placeat dignissimos !</p>
+        </section>
+
+
+        <section class="fourclignotant_principale">
+            <div class="clignotant_forme">Clignotant</div>
+            <div class="clignotant">4 Clignotant</div>
+            <div class="button_test">
+                <a href="game.html">
+                <button class="test_size">TEST</button></a>
+            </div>
+            <div class="img_clignotant">
+                <img id="foclifocli" src="/WCS/Conway-Game-of-Life/src/images/fourclignotant/focli-1.jpg" class="focli1">
+            </div>
+
+            <section class="menu_grille">
+                <div class="button_pre">
+                        <button class="pre_size" id="pre-btn-focli"><</button>
+                </div>
+
+                <div class="button_lancer">
+                        <button class="lancer_size" id="start-button-focli">Lancer</button>
+                </div>
+                <div class="button_lancer button_lancer_stop">
+                    <button class="lancer_size" id="stop-button-focli">Stop</button>
+                </div>
+
+                <div class="button_sui">
+                        <button class="sui_size" id="sui-btn-focli">></button>
+                </div>
+            </section>
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, placeat dignissimos !<br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, placeat dignissimos !</p>
         </section>
 
         <h2>Structures Complexes</h2>
@@ -65,6 +125,8 @@
     <footer>
 
     </footer>
-    <script src="./src/scripts/grid.js"></script>
+    <script src="./src/scripts/grid-cli.js"></script>
+    <script src="./src/scripts/grid-ruc.js"></script>
+    <script src="./src/scripts/grid-focli.js"></script>
 </body>
 </html>
