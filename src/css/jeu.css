@@ -23,12 +23,15 @@
     --alt4:#0B3F70;
 }
 body{
-    background-color: orange;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    background-image: url(/src/images/white_background.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    position: relative;
 }
 main{
     max-width: 425px;
@@ -43,11 +46,12 @@ main{
     clip-path: circle(50% at 50% 50%);
 }
 header{
+    width: 100%;
     min-height: 3rem;
     background-color: var(--col1);
     border-bottom: 1px solid var(--alt2);
-    width: 100%;
-
+    position: sticky;
+    top: 0px;
 }
 ul{
     display: flex;
@@ -74,7 +78,6 @@ ul li a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 1rem;
 }
 input[type="range"]{
@@ -120,6 +123,7 @@ input[type="number"]{
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.5rem;
+    margin-block: 0.6rem;
 }
 .cellExample label{
     flex-grow: 2;
@@ -141,13 +145,16 @@ input[type="number"]{
     border-radius: 5px;
 }
 .gameGrid{
-    width: 123;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     flex-grow: 5;
-    background-image: url(/src/images/white_background.jpg);
-    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.actualGrid{
+    overflow: hidden;
+    display: grid;
+    grid-template-columns:repeat(10, 40px);
 }
 .cell{
     width: 30px;
@@ -156,8 +163,10 @@ input[type="number"]{
     border: 1px solid #00987D;
     border-radius: 5px;
     margin: 0.2rem;
+    display: flex;
 }
 .actionButtons{
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -211,6 +220,8 @@ footer{
     align-items: center;
     justify-content: flex-end;
     border-top: 1px solid var(--alt2);
+    position: sticky;
+    bottom: 0px;
 }
 footer p{
     margin-inline: 1rem;
@@ -223,5 +234,11 @@ footer p{
     }
     .gridSizeSlider{
         display: none;
+    }
+    main{
+        width: 100vw;
+    }
+    header{
+        min-height: 6rem;
     }
 }

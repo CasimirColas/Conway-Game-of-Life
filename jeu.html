@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/jeu.css">
+    <script src="src/scripts/jeu.js"></script>
     <title>Jeu</title>
 </head>
 <body>
@@ -39,34 +40,39 @@
             <input type="number" name="simSpeed" value="0">
         </section>
 
-        <section class="cellExample">
-            <div class="emVisual"></div>
-            <label>Case vide</label>
-            <div class="alVisual"></div>
-            <label>Cellule vivante</label>
-        </section>
+        
 
         <section class="gameGrid">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+
+            <section class="cellExample">
+                <div class="emVisual"></div>
+                <label>Case vide</label>
+                <div class="alVisual"></div>
+                <label>Cellule vivante</label>
+            </section>
+
+            <section class="actualGrid">
+
+            </section>
+            
+            <section class="actionButtons">
+                <button class="run">
+                    <label>Lancer</label>
+                </button>
+                <button class="stop">
+                    <label>Stop</label>
+                </button>
+                <button class="nextStep">
+                    <label>>></label>
+                </button>
+                <div class="nbStep">
+                    <label>0</label>
+                </div>
+            </section>
+
         </section>
 
-        <section class="actionButtons">
-            <button class="run">
-                <label>Lancer</label>
-            </button>
-            <button class="stop">
-                <label>Stop</label>
-            </button>
-            <button class="nextStep">
-                <label>>></label>
-            </button>
-            <div class="nbStep">
-                <label>0</label>
-            </div>
-        </section>
+        
 
     </main>
 
