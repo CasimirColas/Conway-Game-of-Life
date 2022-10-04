@@ -161,15 +161,17 @@ input[type="number"]{
     grid-template-columns:repeat(10, 40px);
 }
 .cell{
+    margin: 0.2rem;
+    display: flex;
+}
+.cell[data-status="dead"]{
     width: 30px;
     height: 30px;
     background: #FFFFFF;
     border: 1px solid #00987D;
     border-radius: 5px;
-    margin: 0.2rem;
-    display: flex;
 }
-#alive {
+.cell[data-status="alive"]{
     width: 30px;
     height: 30px;
     background: #0B3F70;

@@ -23,19 +23,21 @@ function populate(){
     }
 }
 
-function createCell(){
-    const cell = document.createElement("button")
+function createCell(column,row){
+    const cell = document.createElement("div")
     cell.classList.add("cell")
-    cell.setAttribute("id","dead")
+    cell.setAttribute("data-column",`${column}`)
+    cell.setAttribute("data-row",`${row}`)
+    cell.setAttribute("data-status","dead")
     cell.setAttribute("onclick","convertCell(this)")
     grid[0].appendChild(cell)
 }
 
 function convertCell(element){
-    if(element.id==="alive"){
-        element.setAttribute("id","dead")
+    if(element.dataset.status==="alive"){
+        element.setAttribute("data-status","dead")
     }
-    else if(element.id==="dead"){
-        element.setAttribute("id","alive")
+    else if(element.dataset.status==="dead"){
+        element.setAttribute("data-status","alive")
     }
 }
