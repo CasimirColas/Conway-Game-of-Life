@@ -53,7 +53,7 @@ nav a {
     z-index: 100;
 }
 
-/********************caroussel*****************/
+/********************carousel*****************/
 
 .carousel {
     width: 100vw;
@@ -267,6 +267,14 @@ nav a {
 p.para {
     padding-top: 20px;
 }
+
+/******************footer *********************/
+
+.title_3 {
+    background-color: #2F4858;
+}
+
+
 /****************** Responsive ****************/
 
 @media screen and (min-width: 505px){
