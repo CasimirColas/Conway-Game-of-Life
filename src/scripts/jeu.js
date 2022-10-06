@@ -168,6 +168,15 @@ function cellTest(cell){
     }
 }
 
+function isEmpty(){
+    for(let i in cellsList){
+        if(cells[getCellNumber(cellsList[i])].dataset.status==="alive"){
+            return false
+        }
+    }
+    return true
+}
+
 function nextStepSim(cellsList){
     let livingCells =[]
     for(let i in cellsList){
@@ -203,10 +212,10 @@ function launchSim(cellsList){
             setTimeout(function() {
                 nextStepSim(cellsList)
                 actualStep++;
-                if (actualStep < maxSteps && simPlaying) {
+                if (actualStep < maxSteps && simPlaying && !isEmpty()) {
                     myLoop();
                 }else{
-                    simPlaying = false
+                    stop()
                 }
             }, speed)
           }
@@ -223,7 +232,12 @@ function iterateCounter(){
 }
 
 function reset(){
-    counter.textContent = 0
+    if(simPlaying){
+        counter.textContent = -1
+    }else{
+        counter.textContent = 0
+    }
+    stopSim()
     populate()
 }
 
