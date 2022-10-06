@@ -1,6 +1,7 @@
 let Uwidth = undefined
 let Uhight = undefined
 let grid = document.getElementsByClassName("actualGrid")[0]
+let rawDisplay = document.getElementsByClassName("gridSizeNumber")[0]
 let cells = undefined
 let stepCounter = document.getElementById('counter')
 let cellsList = []
@@ -33,7 +34,20 @@ function getSpeed(button){
     }
 }
 
-function addRows(button){
+function addRowSlider(button){
+    button.setAttribute("min",-maxGridHight)
+    button.setAttribute("max",maxGridHight*2)
+    let input = parseInt(button.value)
+    if(button.value===""){
+        moreRows = 0
+        document.getElementsByName
+    }else{
+        moreRows = input
+    }
+    populate()
+}
+
+function addRowInput(button){
     let input = parseInt(button.value)
     if(button.value===""){
         moreRows = 0
@@ -67,6 +81,7 @@ function populate(){
             column = 0
         }
     }
+    rawDisplay.setAttribute('placeholder',maxGridHight+moreRows)
     return [document.getElementsByClassName('cell'),fullgrid]
 }
 
