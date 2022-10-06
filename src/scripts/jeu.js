@@ -2,6 +2,7 @@ let Uwidth = undefined
 let Uhight = undefined
 let grid = document.getElementsByClassName("actualGrid")[0]
 let cells = undefined
+let stepCounter = document.getElementById('counter')
 let cellsList = []
 let maxGridLen = Math.floor(Uwidth*(15/700))
 let maxGridHight = Math.floor(Uhight*(1/60))
@@ -29,7 +30,6 @@ function responsive(){
     maxGridHight = Math.floor(Uhight*(1/60));
     grid.style.gridTemplateColumns = `repeat(${maxGridLen}, 40px)`;
     [cells,cellsList] = populate();
-
 }
 
 function populate(){
@@ -143,9 +143,11 @@ function nextStepSim(cellsList){
     for(let j in livingCells){
         converbyPos(livingCells[j])
     }
+    iterateCounter()
 }
 
 function launchSim(cellsList){
+    counter.textContent = 0
     if(speed===0){
         speed = 700
     }else{
@@ -167,6 +169,8 @@ function launchSim(cellsList){
                 actualStep++;
                 if (actualStep < maxSteps && simPlaying) {
                     myLoop();
+                }else{
+                    simPlaying = false
                 }
             }, speed)
           }
@@ -176,4 +180,8 @@ function launchSim(cellsList){
 
 function stopSim(){
     simPlaying = false
+}
+
+function iterateCounter(){
+    counter.textContent = `${parseInt(counter.textContent)+1}`
 }
