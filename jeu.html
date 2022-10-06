@@ -25,18 +25,18 @@
     <main>
         <section class="gridSelector">
             <label class="sideLabel">Taille de la grille</label>
-                <input class="gridSizeSlider" type="range" name="gridSizeSlider" value="0">
-                <input class="gridSizeNumber" type="number" name="gridSizeNumber" value="0">
+                <input class="gridSizeSlider" type="range" name="gridSizeSlider">
+                <input class="gridSizeNumber" type="number" name="gridSizeNumber">
         </section>
 
         <section class="stepSelector">
             <label class="sideLabel">Nombre de pas</label>
-            <input type="number" name="maxStep" value="0">
+            <input type="number" name="maxStep" onchange="getMaxSteps(this)">
         </section>
 
         <section class="runSpeedSelector">
             <label class="sideLabel">Vitesse de parcour</label>
-            <input type="number" name="simSpeed" value="0">
+            <input type="number" name="speed" onchange="getSpeed(this)">
         </section>
 
         
@@ -59,10 +59,10 @@
             </section>
             
             <section class="actionButtons">
-                <button class="run">
+                <button class="run" onclick="launchSim(cellsList)">
                     <label>Lancer</label>
                 </button>
-                <button class="stop">
+                <button class="stop" onclick="stopSim()">
                     <label>Stop</label>
                 </button>
                 <button class="nextStep" onclick="nextStepSim(cellsList)">

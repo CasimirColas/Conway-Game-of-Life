@@ -3,14 +3,23 @@ let Uhight = undefined
 let grid = document.getElementsByClassName("actualGrid")[0]
 let cells = undefined
 let cellsList = []
-let maxGridLen = Math.floor(Uwidth*(15/700));
+let maxGridLen = Math.floor(Uwidth*(15/700))
 let maxGridHight = Math.floor(Uhight*(1/60))
+let maxSteps = 0
+let speed = 0
+let simPlaying = false
 
 window.addEventListener('resize', responsive)
 window.addEventListener('DOMContentLoaded',()=>{
     responsive()
 })
+function getMaxSteps(button){
+    maxSteps = button.value
+}
 
+function getSpeed(button){
+    speed = button.value
+}
 
 function responsive(){
     grid.textContent = ''
@@ -51,8 +60,6 @@ function createCell(column,row,status){
 }
 
 function convertbyTouch(cell){
-    console.log(cellPos(cell))
-    console.log(cellTest(cell))
     if(cell.dataset.status==="alive"){
         cell.setAttribute("data-status","dead")
     }
@@ -136,4 +143,37 @@ function nextStepSim(cellsList){
     for(let j in livingCells){
         converbyPos(livingCells[j])
     }
+}
+
+function launchSim(cellsList){
+    if(speed===0){
+        speed = 700
+    }else{
+        speed = speed
+    }
+
+    if(maxSteps===0){
+        maxSteps = 50
+    }else{
+        maxSteps = maxSteps
+    }
+    if(!simPlaying){
+        simPlaying = true
+        let actualStep = 0
+
+        function myLoop() {
+            setTimeout(function() {
+                nextStepSim(cellsList)
+                actualStep++;
+                if (actualStep < maxSteps && simPlaying) {
+                    myLoop();
+                }
+            }, speed)
+          }
+        myLoop()
+    }
+}
+
+function stopSim(){
+    simPlaying = false
 }
