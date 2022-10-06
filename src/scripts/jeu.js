@@ -64,7 +64,7 @@ function responsive(){
     maxGridLen = Math.floor(Uwidth*(15/700));
     maxGridHight = Math.floor(Uhight*(1/60));
     grid.style.gridTemplateColumns = `repeat(${maxGridLen}, 40px)`;
-    [cells,cellsList] = populate();
+    cells = populate();
 }
 
 function populate(){
@@ -82,7 +82,8 @@ function populate(){
         }
     }
     rawDisplay.setAttribute('placeholder',maxGridHight+moreRows)
-    return [document.getElementsByClassName('cell'),fullgrid]
+    cellsList = fullgrid
+    return document.getElementsByClassName('cell')
 }
 
 function createCell(column,row,status){
