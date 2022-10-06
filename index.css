@@ -60,8 +60,8 @@ img {
 }
 
 .icon-game {
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    top: 40px;
 }
 
 @media screen and (max-width: 900px) {
