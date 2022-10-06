@@ -24,26 +24,26 @@
 
     <main>
         <section class="gridSelector">
-            <label class="sideLabel">Taille de la grille</label>
+            <h3 class="sideLabel">Taille de la grille</h3>
                 <input class="gridSizeSlider" type="range" name="gridSizeSlider">
                 <input class="gridSizeNumber" type="number" name="gridSizeNumber">
         </section>
 
         <section class="stepSelector">
-            <label class="sideLabel">Nombre de pas</label>
+            <h3 class="sideLabel">Nombre de pas</h3>
             <input type="number" name="maxStep" onchange="getMaxSteps(this)">
         </section>
 
         <section class="runSpeedSelector">
-            <label class="sideLabel">Vitesse de parcour</label>
+            <h3 class="sideLabel">Vitesse de parcour</h3>
             <input type="number" name="speed" onchange="getSpeed(this)">
         </section>
 
         
 
-        <section class="gameGrid">
+        <div class="gameGrid">
 
-            <section class="cellExample">
+            <div class="cellExample">
                 <div class="exampleItem">
                     <div class="emVisual"></div>
                     <label>Case vide</label>
@@ -52,36 +52,24 @@
                     <div class="alVisual"></div>
                     <label>Cellule vivante</label>
                 </div>
-            </section>
+            </div>
 
-            <section class="actualGrid">
+            <div class="actualGrid">
 
-            </section>
+            </div>
             
-            <section class="actionButtons">
-                <button class="run" onclick="launchSim(cellsList)">
-                    <label>Lancer</label>
-                </button>
-                <button class="stop" onclick="stopSim()">
-                    <label>Stop</label>
-                </button>
-                <button class="nextStep" onclick="nextStepSim(cellsList)">
-                    <label>>></label>
-                </button>
+            <div class="actionButtons">
+                <button class="run" onclick="launchSim(cellsList)">Lancer</button>
+                <button class="stop" onclick="stopSim()">Stop</button>
+                <button class="nextStep" onclick="nextStepSim(cellsList)">>></button>
                 <div class="nbStep">
                     <label id="counter">0</label>
                 </div>
-                <button class="reset" onclick="reset()">
-                    <label>Reinitialiser</label>
-                </button>
-                <button class="random" onclick="radomGrid()">
-                    <label>Grille aleatoire</label>
-                </button>
-            </section>
+                <button class="reset" onclick="reset()">Reinitialiser</button>
+                <button class="random" onclick="radomGrid()">Grille aleatoire</button>
+            </div>
 
-        </section>
-
-        
+        </div>
 
     </main>
 
