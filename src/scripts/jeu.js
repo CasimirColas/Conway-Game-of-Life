@@ -8,6 +8,7 @@ let maxGridLen = Math.floor(Uwidth*(15/700))
 let maxGridHight = Math.floor(Uhight*(1/60))
 let maxSteps = 0
 let speed = 0
+let moreRows = 0
 let simPlaying = false
 
 window.addEventListener('resize', responsive)
@@ -20,6 +21,16 @@ function getMaxSteps(button){
 
 function getSpeed(button){
     speed = button.value
+}
+
+function addRows(button){
+    let input = parseInt(button.value)
+    if(input===NaN){
+        moreRows = 0
+    }else{
+        moreRows = input
+    }
+    populate()
 }
 
 function responsive(){
@@ -37,7 +48,7 @@ function populate(){
     let column = 0
     let row = 0
     let fullgrid = []
-    for(let i=0;i<maxGridLen*maxGridHight;i++){
+    for(let i=0;i<maxGridLen*(maxGridHight+moreRows);i++){
         createCell(column,row,'dead')
         fullgrid.push(`${column}-${row}`)
         column ++
