@@ -248,7 +248,7 @@ function radomGrid(){
     let column = 0
     let row = 0
     let fullgrid = []
-    for(let i=0;i<maxGridLen*maxGridHight;i++){
+    for(let i=0;i<maxGridLen*(maxGridHight+moreRows);i++){
         if(Math.floor(Math.random() * 4)===3){
             createCell(column,row,'alive')
         }else{
