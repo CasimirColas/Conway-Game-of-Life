@@ -26,17 +26,17 @@
         <section class="gridSelector">
             <h3 class="sideLabel">Taille de la grille</h3>
                 <input class="gridSizeSlider" type="range" name="gridSizeSlider" onchange="">
-                <input class="gridSizeNumber" type="number" name="gridSizeNumber" onchange="addRows(this)">
+                <input class="gridSizeNumber" type="number" name="gridSizeNumber" placeholder="0" onchange="addRows(this)">
         </section>
 
         <section class="stepSelector">
             <h3 class="sideLabel">Nombre de pas</h3>
-            <input type="number" name="maxStep" onchange="getMaxSteps(this)">
+            <input type="number" name="maxStep" placeholder="50" onchange="getMaxSteps(this)">
         </section>
 
         <section class="runSpeedSelector">
             <h3 class="sideLabel">Vitesse de parcour</h3>
-            <input type="number" name="speed" onchange="getSpeed(this)">
+            <input type="number" name="speed" placeholder="700 ms" onchange="getSpeed(this)">
         </section>
 
         

@@ -16,16 +16,26 @@ window.addEventListener('DOMContentLoaded',()=>{
     responsive()
 })
 function getMaxSteps(button){
-    maxSteps = button.value
+    let input = parseInt(button.value)
+    if(button.value===""){
+        maxSteps = 0
+    }else{
+        maxSteps = input
+    }
 }
 
 function getSpeed(button){
-    speed = button.value
+    let input = parseInt(button.value)
+    if(button.value===""){
+        speed = 0
+    }else{
+        speed = input
+    }
 }
 
 function addRows(button){
     let input = parseInt(button.value)
-    if(input===NaN){
+    if(button.value===""){
         moreRows = 0
     }else{
         moreRows = input
