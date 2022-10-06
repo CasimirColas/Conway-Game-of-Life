@@ -226,6 +226,14 @@ input[type="number"]{
     margin-inline: 0.5rem;
     max-width: 7rem;
 }
+.random{
+    margin-inline: 0.5rem;
+    max-width: 7rem;
+}
+.reset{
+    margin-inline: 0.5rem;
+    max-width: 7rem;
+}
 footer{
     width: 100%;
     background-color: var(--col1);

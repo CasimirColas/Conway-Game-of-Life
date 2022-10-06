@@ -185,3 +185,30 @@ function stopSim(){
 function iterateCounter(){
     counter.textContent = `${parseInt(counter.textContent)+1}`
 }
+
+function reset(){
+    counter.textContent = 0
+    populate()
+}
+
+function radomGrid(){
+    reset()
+    grid.textContent = ''
+    let column = 0
+    let row = 0
+    let fullgrid = []
+    for(let i=0;i<maxGridLen*maxGridHight;i++){
+        if(Math.floor(Math.random() * 4)===3){
+            createCell(column,row,'alive')
+        }else{
+            createCell(column,row,'dead')
+        }
+        fullgrid.push(`${column}-${row}`)
+        column ++
+        if(column===maxGridLen){
+            row ++
+            column = 0
+        }
+    }
+    cellsList = fullgrid
+}
