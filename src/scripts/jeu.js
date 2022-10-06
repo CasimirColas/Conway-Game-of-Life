@@ -1,3 +1,5 @@
+const wRatio = 15/700
+const hRation = 1/60
 let Uwidth = undefined
 let Uhight = undefined
 let grid = document.getElementsByClassName("actualGrid")[0]
@@ -5,8 +7,8 @@ let rawDisplay = document.getElementsByClassName("gridSizeNumber")[0]
 let cells = undefined
 let stepCounter = document.getElementById('counter')
 let cellsList = []
-let maxGridLen = Math.floor(Uwidth*(15/700))
-let maxGridHight = Math.floor(Uhight*(1/60))
+let maxGridLen = Math.floor(Uwidth*wRatio)
+let maxGridHight = Math.floor(Uhight*hRation)
 let maxSteps = 0
 let speed = 0
 let moreRows = 0
@@ -61,8 +63,8 @@ function responsive(){
     grid.textContent = ''
     Uwidth = document.documentElement.clientWidth;
     Uhight = document.documentElement.clientHeight;
-    maxGridLen = Math.floor(Uwidth*(15/700));
-    maxGridHight = Math.floor(Uhight*(1/60));
+    maxGridLen = Math.floor(Uwidth*wRatio);
+    maxGridHight = Math.floor(Uhight*hRation);
     grid.style.gridTemplateColumns = `repeat(${maxGridLen}, 40px)`;
     cells = populate();
 }
