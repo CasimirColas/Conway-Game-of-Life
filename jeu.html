@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/jeu.css">
+    <title>Jeu</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><img class="logo" src="src/images/Logo.png" alt=""></li>
+                <li><a href="index.html">Acceil</a></li>
+                <li class="bottomflex"><a href="biographie.html">Biographie</a></li>
+                <li class="bottomflex"><a href="jeu.html">Jeu</a></li>
+                <li><a href="structures.html">Structures</a></li>
+                <li><a href="variantes.html">Variantes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gridSelector">
+            <h3 class="sideLabel">Taille de la grille</h3>
+                <input class="gridSizeSlider" type="range" name="gridSizeSlider" onchange="addRowSlider(this)">
+                <input class="gridSizeNumber" type="number" name="gridSizeNumber" min=0 onchange="addRowInput(this)">
+        </section>
+
+        <section class="stepSelector">
+            <h3 class="sideLabel">Nombre de pas</h3>
+            <input type="number" name="maxStep" min=0 placeholder="50" onchange="getMaxSteps(this)">
+        </section>
+
+        <section class="runSpeedSelector">
+            <h3 class="sideLabel">Vitesse de parcour</h3>
+            <input type="number" name="speed" min=0 placeholder="700 ms" onchange="getSpeed(this)">
+        </section>
+
+        
+
+        <div class="gameGrid">
+
+            <div class="cellExample">
+                <div class="exampleItem">
+                    <div class="emVisual"></div>
+                    <label>Case vide</label>
+                </div>
+                <div class="exampleItem">
+                    <div class="alVisual"></div>
+                    <label>Cellule vivante</label>
+                </div>
+            </div>
+
+            <div class="actualGrid">
+
+            </div>
+            
+            <div class="actionButtons">
+                <button class="run" onclick="launchSim(cellsList)">Lancer</button>
+                <button class="stop" onclick="stopSim()">Stop</button>
+                <button class="nextStep" onclick="nextStepSim(cellsList)">>></button>
+                <div class="nbStep">
+                    <label id="counter">0</label>
+                </div>
+                <button class="reset" onclick="reset()">Reinitialiser</button>
+                <button class="random" onclick="radomGrid()">Grille aleatoire</button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Page crée par Casimir Colas</p>
+    </footer>
+    <script src="src/scripts/jeu.js"></script>
+</body>
+</html>
