@@ -1,6 +1,6 @@
 const cracra = document.getElementById('cracra')
 
-let path50 = '/WCS/Conway-Game-of-Life/src/images/crapeau/cra_'
+let path50 = 'src/images/crapeau/cra_'
 let frame50 = 1
 let interval50;
 function start50 () {

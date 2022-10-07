@@ -1,6 +1,6 @@
 const rucruc = document.getElementById('rucruc')
 
-let path20 = '/WCS/Conway-Game-of-Life/src/images/ruche/ruc_'
+let path20 = 'src/images/ruche/ruc_'
 let frame20 = 1
 let interval20;
 function start20 () {

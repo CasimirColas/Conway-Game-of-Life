@@ -1,6 +1,6 @@
 const clicli = document.getElementById('clicli')
 
-let path10 = '/WCS/Conway-Game-of-Life/src/images/clignotant/cli_'
+let path10 = 'src/images/clignotant/cli_'
 let frame10 = 1
 let interval10;
 function start10 () {
