@@ -1,0 +1,269 @@
+:root{
+    /* colors */
+    --col1:#2F4858;
+    --col2:#165B6F;
+    --col3:#00707E;
+    --col4:#008483;
+    --col5:#00987D;
+    --col6:#04AA6D;
+
+    --alt1:#0BE0BA;
+    --alt2:#00BFC9;
+    --alt3:#ffffff;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
+
+*{ 
+    padding: 1px;
+    margin: 0px 1px 0px 1px;
+    box-sizing: border-box;
+    font-size: medium;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    line-height: 2em;
+    width: 100%;
+    position: relative;
+
+}
+
+p  {
+font-hei
+
+}
+.rules{
+        display: flex;
+        padding-left: 1vh;
+        padding-right: 1vh;
+        padding-top: 1vh;
+        background-color: var(--col1);
+        height: 7vh;
+        color:var(--alt3);
+    }
+
+.rules ul{
+padding-top: 1em;
+}
+
+header{
+min-height: 32vh;
+padding: 20px 1px 0px 1px;
+}
+
+.variantes{
+        display: flex;
+        padding-left: 1vh;
+        padding-right: 1vh;
+        padding-top: 1vh;
+        background-color: var(--col2);
+        height: 7vh;
+        color:var(--alt3);
+        grid-column-start: 2;
+}
+
+.version3d{
+        display: flex;
+        padding-left: 1vh;
+        padding-right: 1vh;
+        padding-top: 1vh;
+        background-color: var(--col3);
+        height: 7vh;
+        color:var(--alt3);
+        grid-column-start: 2;
+}
+
+.sources{
+        display: flex;
+        padding-left: 1vh;
+        padding-right: 1vh;
+        padding-top: 1vh;
+        background-color: var(--col4);
+        height: 7vh;
+        color:var(--alt3);
+        grid-column-start: 2;
+        width:cover;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    font-size: 2em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    align-items: center;
+    color:var(--alt3);
+}
+    
+.Variantesjeudelavie{
+        display:block;
+        columns: row;
+        justify-content:flex-end;
+
+    }
+
+    
+main {
+    background-image: url("src/images/white_background.jpg");
+    height: 100%;
+    width: auto;
+}
+
+@media (min-width: 600px) {
+    img.topimage1{
+        width: auto;
+        height: 32vh;
+        justify-content: center;
+        object-fit: cover;
+        object-position: top;
+        position: absolute;
+        padding-bottom: 2rem;
+}
+}
+
+/*Grid des Variantes*/
+
+.Variantesjeudelavie {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    align-items: center;
+    padding-left: 1em;
+}
+    
+.DayandNight { grid-area: 1 / 1 / 2 / 2; }
+.HighLife { grid-area: 2 / 1 / 3 / 2; }
+.BoucledeLangton { grid-area: 3 / 1 / 4 / 2; }
+.icon2 { grid-area: 1 / 2 / 2 / 3; }
+.icon3 { grid-area: 2 / 2 / 3 / 3; }
+.icon4 { grid-area: 3 / 2 / 4 / 3; }
+
+    
+.DayandNight, .BoucledeLangton, .HighLife {
+    display: grid;
+    box-sizing: border-box;
+    width: auto;
+    height: fit-content;
+    background: rgba(172, 212, 214, 0.4);
+    border: 1px solid #00987D;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    justify-content: space-around;
+}
+
+
+.icon2, .icon3, .icon4 {
+    display:block;
+    justify-content: center;
+}
+
+
+/* Modal Variantes*/
+
+@media (max-width: 600px) {
+.uk-modal-container .uk-modal-dialog {
+    width: 100%;
+    padding: 2em;
+    margin-right: 2.5em;
+    right: 1%;
+    
+}
+.uk-modal {
+
+    padding: 50% 0px 50% 10px;
+}
+
+svg {
+
+    left: 10em ;
+    color: var(--alt1);
+}
+}
+
+
+svg  {
+
+    /*canvas, svg, video {*/
+        max-width: 100%;
+        height: 20px;
+        box-sizing: border-box;
+        ;
+
+    
+}
+/*bouton youtube dans la version 3D*/
+    .uk-button-default {
+        background-color: var(--col6);
+        color: var(--alt3);
+        border: 1px solid var(--col3);
+}
+
+
+.topimage1 {
+    width: 100%;
+    height: 30vh;
+    padding: 1em 0em 0em 0em;
+    object-fit: cover;
+    position: absolute;
+    object-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+h5 {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+
+
+.uk-modal-close-default{
+
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.Sources ul {
+    padding-bottom: 1em;
+    display: table-footer-group;
+}
+
+ul  {
+        padding-left: 0 30px 0 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: space-between;
+        margin: auto;
+}
+
+
+ /* Footer */
+.Credit {
+padding: 0;
+box-sizing: border-box;
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+background: var(--col3);
+border-top: 2px solid #0BE0BA;
+
+}
+
+h3 {
+
+    color:var(--alt3);
+    font-size:medium;
+    margin: auto;
+}
