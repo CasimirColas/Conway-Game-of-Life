@@ -1,6 +1,6 @@
 const foclifocli = document.getElementById('foclifocli')
 
-let path30 = '/Conway-Game-of-Life/src/images/fourclignotant/focli-'
+let path30 = 'src/images/fourclignotant/focli-'
 let frame30 = 1
 let interval30;
 function start30 () {

@@ -1,6 +1,6 @@
 const forucforuc = document.getElementById('forucforuc')
 
-let path60 = '/Conway-Game-of-Life/src/images/fourruche/foru_'
+let path60 = 'src/images/fourruche/foru_'
 let frame60 = 1
 let interval60;
 function start60 () {

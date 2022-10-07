@@ -1,6 +1,6 @@
 const pulpul = document.getElementById('pulpul')
 
-let path70 = '/Conway-Game-of-Life/src/images/pulsar/pul_'
+let path70 = 'src/images/pulsar/pul_'
 let frame70 = 1
 let interval70;
 function start70 () {

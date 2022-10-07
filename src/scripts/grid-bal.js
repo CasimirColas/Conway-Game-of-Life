@@ -1,6 +1,6 @@
 const balbal = document.getElementById('balbal')
 
-let path40 = '/Conway-Game-of-Life/src/images/balise/bal_'
+let path40 = 'src/images/balise/bal_'
 let frame40 = 1
 let interval40;
 function start40 () {
